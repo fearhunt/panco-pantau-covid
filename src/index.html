@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <!-- <meta name="author" content="FIRHAN M R"> -->
+
+        <title>Dicoding Story</title>
+        
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <script>
+            const loadCov = function(){
+                fetch("https://api.kawalcorona.com/indonesia")
+                    .then(response => {
+                        return response.json();
+                    }).then(responseJson => {
+                        console.log(responseJson);
+                    }).catch(error => {
+                        console.log(error);
+                    })
+            }
+
+            loadCov();
+        </script>
+    </body>
+</html>
