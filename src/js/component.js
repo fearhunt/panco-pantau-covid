@@ -9,9 +9,9 @@ class CardData extends HTMLElement {
         this.innerHTML = `
             <div id="${this.id}" class="card single-card mx-1">
                 <p>${this.description}</p>
-                <h3 class="font-weight-bold desc">12927</h3>
+                <h3 id="${this.id + '-num'}" class="font-weight-bold desc desc-number">-----</h3>
             </div>
-        `
+        `;
     }
 }
 

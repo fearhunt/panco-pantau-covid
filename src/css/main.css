@@ -22,12 +22,20 @@
     transition: all 0.5s ease-in-out 0s;
 }
 
+.navbar-light .navbar-toggler{
+    color: white;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
 .navbar a {
     color: #212529;
     font-weight: bolder;
 }
 
-.navbar.transparent a {
+.navbar.transparent a, .navbar.transparent .fa {
     color: white;
 }
 
@@ -173,7 +181,7 @@ p.desc {
     box-shadow: 0px 10px 30px 0px rgba(20, 131, 221, 0.3);
 }
 
-#search-data {
+#search-data > div {
     width: 60%;
     margin: 0 auto;
     border: 2px solid black;
@@ -181,11 +189,17 @@ p.desc {
     transition: all 0.4s ease-in;
 } 
 
-#search-data:hover {
+#search-data > div:hover {
     border-color: #fb973b;
     transition: all 0.4s ease-in;
     -webkit-box-shadow: 0px 3px 13px 0px #fb983be1;
     box-shadow: 0px 3px 13px 0px #fb983be1;
+}
+
+@media (max-width: 992px) {
+    #search-data > div {
+        width: 80%;
+    } 
 }
 
 .img-content {
@@ -194,13 +208,13 @@ p.desc {
 
 @media (max-width: 992px) {
     .img-content {
-        max-width: 175px;
+        max-width: 250px;
     }
 }
 
 @media (max-width: 768px) {
     .img-content {
-        max-width: 125px;
+        max-width: 200px;
     }
 }
 
@@ -229,12 +243,12 @@ p.desc {
 }
 
 .card .desc {
-    font-size: 4.5rem;
+    font-size: 3.25rem;
 }
 
 .card.single-card {
     border-radius: 10px;
-    height: 190px; /*140*/
+    height: 120px;
     font-weight: bold;
     border-top: 10px solid #212529;
 }

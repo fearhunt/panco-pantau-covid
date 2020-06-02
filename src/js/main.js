@@ -3,6 +3,7 @@ import {GlobalFetch, IndonesiaFetch} from './fetchApi';
 const $ = require('jquery');
 
 $(document).ready(function() {
+    // check scroll position
     CheckScroll();
 
     // component card-data
@@ -31,6 +32,39 @@ $(document).ready(function() {
 
             document.getElementById('table-content').innerHTML = table_content;
         }) 
+})
+
+const search_data = document.getElementById('search-data');
+search_data.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // variable to store country name
+    let country = ""
+
+    // get search box value
+    let search_value = search_data['search-box'].value.toLowerCase();
+    let join_string = ""
+
+    if (search_value.includes("-")) {
+        search_value = search_value.split('-')
+        join_string = "-"
+    }
+    else {
+        search_value = search_value.split(' ')
+        join_string = " "
+    }
+    
+    // capitalizing string before passed to API
+    search_value.forEach((s) => {
+        // to make sure word "and" & "the" not capitalized
+        if (s != "and" && s!= "the") s = s.charAt(0).toUpperCase() + s.substring(1);
+        country += s + join_string;
+    })
+
+    // remove last character by only pick from first to last char
+    country = country.slice(0, -1);
+    
+    GlobalFetch(country)
 })
 
 $(window).scroll(function() {

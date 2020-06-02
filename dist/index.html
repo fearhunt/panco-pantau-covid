@@ -23,7 +23,7 @@
             <!-- hamburger menu -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fa fa-bars"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -74,20 +74,20 @@
                             Masukkan nama negara pada kotak pencarian
                         </p>
 
-                        <form>
-                            <div id="search-data" class="d-flex mb-2"> <!--masih cacad-->
-                                <input onclick="this.select()" id="search-box" type="text" value="Indonesia">
+                        <form id="search-data">
+                            <div class="d-flex mb-2"> 
+                                <input onclick="this.select()" id="search-box" type="text" value="Indonesia"> 
                                 <input id="submit-box" type="submit" value="search">
                             </div>
                         </form>
 
                         <div id="display-data" class="mt-5 mb-2">
-                            <p class="desc ">Jumlah kasus di <span id="nama-negara"></span> saat ini:</p>
+                            <p id="keterangan" class="desc mb-1"></p>
                             <div class="row">
                                 <card-data display="total-pasien" description="Total Pasien" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
-                                <card-data display="total-haha" description="Pasien Sembuh" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
-                                <card-data display="total-hasaha" description="Dalam Perawatan" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
-                                <card-data display="total-hahasasa" description="Kasus Meninggal" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
+                                <card-data display="pasien-sembuh" description="Pasien Sembuh" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
+                                <card-data display="dalam-perawatan" description="Dalam Perawatan" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
+                                <card-data display="kasus-meninggal" description="Kasus Meninggal" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
                             </div>
                         </div>
                     </div>
@@ -129,11 +129,11 @@
         <section id="info-lanjut" class="dark-blue-bg">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-md-5 text-center my-auto">
+                    <div class="col-sm-12 col-md-5 text-center my-auto py-2">
                         <img src="./assets/images/bertemu-dokter.png" class="img-fluid img-content " alt="">
                     </div>
 
-                    <div class="col-sm-12 col-md-7 text-justify text-white my-auto">
+                    <div class="col-sm-12 col-md-7 text-justify text-white my-auto py-2">
                         <h1 class="px-2 font-weight-bold">
                             Apa yang bisa kita lakukan?
                         </h1>
@@ -150,8 +150,8 @@
                         </p>
 
                         <div class="col-sm-12 text-center">
-                            <a href="tel::119" class="btn btn-light-std btn-secondary mx-2">Hotline COVID-19</a>
-                            <a href="https://covid19.go.id/edukasi/pengantar" target="_blank" class="btn btn-light-std mx-2">Edukasi COVID-19</a>
+                            <a href="tel::119" class="btn btn-light-std btn-secondary mx-2 my-2">Hotline COVID-19</a>
+                            <a href="https://covid19.go.id/edukasi/pengantar" target="_blank" class="btn btn-light-std mx-2 my-2">Edukasi COVID-19</a>
                         </div>
                     </div>
                 </div>

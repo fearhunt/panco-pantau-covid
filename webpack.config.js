@@ -4,7 +4,7 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
@@ -13,7 +13,7 @@ module.exports = {
     },
     optimization: {
         minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
-        minimize: true
+        minimize: true  // otomatis nyala kalau mode production
     },
     watch: true,    // otomatis nyala kalau pakai webpack-dev-server
     entry: {
