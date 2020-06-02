@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server .",
+    "start": "webpack-dev-server --open",
     "build": "webpack"
   },
   "repository": {
@@ -23,12 +23,19 @@
   },
   "homepage": "https://github.com/fearhunt/panco-pantau-covid#readme",
   "dependencies": {
-    "bootstrap": "^4.4.1",
-    "jquery": "^3.5.0"
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "http-server": "^0.12.1",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }

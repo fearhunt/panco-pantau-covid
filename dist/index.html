@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="FIRHAN M R">
+
+    <title>PANCO | Pantau COVID-19</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/bundle.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar transparent navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="#">PANCO</a>
+            <!-- hamburger menu -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link " href="#global-data">Global</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#indonesia-data">Indonesia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tel::119">Hotline COVID-19</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="landing" class="d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 text-sm-center text-md-left text-white ">
+                        <h1 class="title mb-2">
+                            Pantau COVID-19 
+                        </h1>
+                        <p class="desc my-3">
+                            Platform <strong>PANCO (Pantau COVID-19)</strong> berisikan informasi terkait persebaran COVID-19 di seluruh dunia 
+                            dan seluruh provinsi di Indonesia
+                        </p>
+                        <a href="#global-data" class="btn btn-start btn-light-std">
+                            <i class="fa fa-arrow-down mr-1" aria-hidden="true"></i>
+                            Jelajah Informasi COVID-19
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="global-data" class="light-blue-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h2 class="sub-title">
+                            Data Global
+                        </h2>
+                        <p class="desc mb-4">
+                            Masukkan nama negara pada kotak pencarian
+                        </p>
+
+                        <form>
+                            <div id="search-data" class="d-flex mb-2"> <!--masih cacad-->
+                                <input onclick="this.select()" id="search-box" type="text" value="Indonesia">
+                                <input id="submit-box" type="submit" value="search">
+                            </div>
+                        </form>
+
+                        <div id="display-data" class="mt-5 mb-2">
+                            <p class="desc ">Jumlah kasus di <span id="nama-negara"></span> saat ini:</p>
+                            <div class="row">
+                                <card-data display="total-pasien" description="Total Pasien" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
+                                <card-data display="total-haha" description="Pasien Sembuh" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
+                                <card-data display="total-hasaha" description="Dalam Perawatan" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
+                                <card-data display="total-hahasasa" description="Kasus Meninggal" class="col-sm-12 col-md-6 col-lg-3 my-3"></card-data>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="indonesia-data">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h2 class="sub-title">
+                            Data Persebaran di Indonesia
+                        </h2>
+                        <p class="desc mb-4">
+                            Berikut adalah data persebaran COVID-19 di seluruh provinsi Indonesia
+                        </p>
+
+                        <div class="table-responsive">
+                            <table class="table  mb-0">
+                                <thead style="position: sticky;">
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">PROVINSI</th>
+                                        <th scope="col">POSITIF</th>
+                                        <th scope="col">SEMBUH</th>
+                                        <th scope="col">MENINGGAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-content">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info-lanjut" class="dark-blue-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-5 text-center my-auto">
+                        <img src="./assets/images/bertemu-dokter.png" class="img-fluid img-content " alt="">
+                    </div>
+
+                    <div class="col-sm-12 col-md-7 text-justify text-white my-auto">
+                        <h1 class="px-2 font-weight-bold">
+                            Apa yang bisa kita lakukan?
+                        </h1>
+            
+                        <p class="desc px-2">
+                            Selama masa pandemi COVID-19, para ahli medis menyarankan pasien untuk melakukan 
+                            tindakan pencegahan yang bertujuan untuk 
+                            mengurangi resiko terinfeksi. <strong>Ketahui</strong> informasi 
+                            yang benar dan jangan terperangkap dalam hoax dan informasi yang menyesatkan.
+                            <br><br>
+                            Untuk informasi lebih lanjut, silakan untuk menghubungi hotline COVID-19 atau membaca
+                            edukasi COVID-19
+                            <br>
+                        </p>
+
+                        <div class="col-sm-12 text-center">
+                            <a href="tel::119" class="btn btn-light-std btn-secondary mx-2">Hotline COVID-19</a>
+                            <a href="https://covid19.go.id/edukasi/pengantar" target="_blank" class="btn btn-light-std mx-2">Edukasi COVID-19</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mb-0 text-white py-3">
+            <p>
+                Made from <i class="fa fa-home"></i> by Firhan Mahdi R
+                <br>
+                <strong>Find me on:</strong>
+                <br>
+                <ul>
+                    <li><a href="https://instagram.com/firhanramadhani" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li style="border-left: 2px solid white; border-right: 2px solid white;"><a href="https://t.me/fearhunt" target="_blank"><i class="fa fa-telegram"></i></a></li>
+                    <li><a href="https://github.com/fearhunt" target="_blank"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </p>
+        </footer>
+    </main>
+
+    <script src="./js/bundle.js"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
